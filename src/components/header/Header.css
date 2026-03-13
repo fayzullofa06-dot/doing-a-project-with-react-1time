@@ -1,39 +1,83 @@
-header{
-    background-color: #333;
-  padding: 10px 20px;
- position: fixed;
-top:0;
- left:0;
- width: 100%;
-
-
-
-ul{
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
+*{
+    margin: 0;
     padding: 0;
-margin: 0;
-
-
-
-li{
-    display: inline;
-text-decoration: none;
-
-
-a{
-    text-decoration: none;
-    color: white;
+    box-sizing: border-box;
+}
+.header{
+    position: fixed;
+    top:0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 39px;
+    width: 100%;
+    background-color: transparent;
+}
+header .logo img{
+    width:80px;
+    max-width: 200px;
+    min-width: 40px;
+    min-height: 40px;
+    max-height: 200px;
+    height: auto;
+   
+}
+header .nav-links{
+    display: flex;
+    gap: 30px;
+} 
+ header .nav-links li{
+    list-style: none;
     font-size: 18px;
-    font-weight: bold;
-    transition: color 0.3 ease;
-
-    &:hover{
-    color: orange;
+    font-weight: 500;
+    color: white;
+    cursor: pointer;
 }
+header .btns{
+    display: flex;
+    min-width: 50px;
+    max-width: 200px;
+    gap: 30px;
 }
+header .Log-btn{
+ border:none;
+font-family: Rubik;
+font-weight: 400;
+font-style: Regular;
+font-size: 20px;
+line-height: 100%;
+letter-spacing: 0%;
+ background-color: transparent;
+/* color: rgba(255, 255, 255, 1); */
+;
 
-}}}
+}
+header .Sign-btn{
+    background-color:  rgba(255, 119, 87, 1);
+    height: 60px;
+padding: 10px 20px;
+opacity: 1;
+border-radius: 12px;
+border: transparent;
+font-family: Rubik;
+font-weight: 400;
+font-style: Regular;
+font-size: 20px;
+line-height: 100%;
+letter-spacing: 0%;
+color: rgba(255, 255, 255, 1);
+;
+}
+header .Sign-btn:hover{
+    background-color: rgba(248, 93, 58, 0.671);
+}
+header .Sign-btn:active{
+    background-color: rgba(255, 119, 87, 1);
+}
+header .nav-links li:hover {
+    border-bottom: 2px solid orange;  /* underline appears on hover */
+}
+header .nav-links li.active {
+    border-bottom: 2px solid orange;  /* underline stays for active page */
+}
