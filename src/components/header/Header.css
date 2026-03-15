@@ -38,7 +38,7 @@ header .btns{
     display: flex;
     min-width: 50px;
     max-width: 200px;
-    gap: 30px;
+    gap: 20px;
 }
 header .Log-btn{
  border:none;
@@ -49,24 +49,21 @@ font-size: 20px;
 line-height: 100%;
 letter-spacing: 0%;
  background-color: transparent;
-/* color: rgba(255, 255, 255, 1); */
+color: rgba(255, 255, 255, 1);
 ;
 
 }
 header .Sign-btn{
     background-color:  rgba(255, 119, 87, 1);
-    height: 60px;
-padding: 10px 20px;
+width: 134;
+height: 64;
+padding-top: 20px;
+padding-right: 32px;
+padding-bottom: 20px;
+padding-left: 32px;
 opacity: 1;
 border-radius: 12px;
-border: transparent;
-font-family: Rubik;
-font-weight: 400;
-font-style: Regular;
-font-size: 20px;
-line-height: 100%;
-letter-spacing: 0%;
-color: rgba(255, 255, 255, 1);
+color: white
 ;
 }
 header .Sign-btn:hover{
