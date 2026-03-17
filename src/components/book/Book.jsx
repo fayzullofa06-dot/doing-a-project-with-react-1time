@@ -1,10 +1,16 @@
 import React, { useState } from 'react'
+import { FaArrowRight } from 'react-icons/fa'
+ import { FaChevronUp,FaChevronDown } from 'react-icons/fa';
 import './Book.css' 
 export default function Book() {
   const [country, setCountry] = useState('')
   const [numberOfPeople, setNumberOfPeople] = useState('')
   const [date, setDate] = useState('')
   const [delayedFlights, setDelayedFlights] = useState('')
+  const [dots, setDots] = useState('')
+  
+  const dotso=['.','.','.','.','.']
+  
   return (
     <div className='book-container'>
       <div className='booking-part'>
@@ -42,11 +48,23 @@ export default function Book() {
           <div className='Delayed'>Delayed</div>
            <select name="delayed-flights" value={delayedFlights} onChange={(e) => setDelayedFlights(e.target.value)}>
           <option value="">Select delayed flights</option>
-          <option value="yes">Yes</option>
+          <option value="yes">Yes</option> 
           <option value="no">No</option>
         </select>
       </div>
-        <button className='Booking-btn'>Book Now</button> 
+        <button className='Booking-btn' > <span className='btn-text'>Book now</span> <FaArrowRight className='arrow-icon'/></button> 
+          <div className='dots'>
+            {dotso.map((dot,index)=>(
+              
+              <span key={index} className={`dot ${dots===index ? 'active' : ''}`} onClick={()=>setDots(indexnpm )}>{dot}</span>
+            ))}
+            <div className='arrows'>
+<FaChevronUp className='arrow-up'/>
+<FaChevronDown className='arrow-down'/>
+            </div>
+
+        </div>
+
       </div> 
     </div>
 

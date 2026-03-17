@@ -35,7 +35,7 @@ select:hover {
   border-top: none;
   border-left: none;
     border-right: none;
-}
+} 
 
 /* when user clicks */
 select:focus {
@@ -49,21 +49,36 @@ select:focus {
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
-    width: 170px;
-height: 216px;
-margin-top: -50px;
 padding-top: 70px;
 padding-right: 20px;
 padding-bottom: 60px;
-padding-left: 20px;
-position: relative; 
-z-index: 200px;
-left: 70px;
-
+padding-left:10px;
 opacity: 1;
 border-top-right-radius: 20px;
 border-bottom-right-radius: 20px;
 
+}
+
+.btn-text:hover {
+  display: inline-block;
+    animation: movetop 1s ease-in-out infinite forwards;
+}
+@keyframes movetop
+{
+    0% {
+      transform: translateY(0);
+    }
+
+   50% {
+    transform: translateY(-30px);
+   }
+    100% {
+      transform: translateY(-50px);
+    }
+}
+.arrow-icon {
+  margin-left: 8px;
+  transition: transform 0.2s ease;
 }
 .book-container .Booking-btn:hover {
     background-color: #e66a00;
@@ -71,3 +86,41 @@ border-bottom-right-radius: 20px;
 .book-container .Booking-btn:active {
     background-color: #cc5c00;
 }
+
+
+.dots {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+margin-top: 20px;
+position: absolute;
+right: 0;
+gap: 20px;
+margin-bottom: 200px;
+padding: 20px ;
+}
+.dot{
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  border-radius: 50%;
+  background-color: #ff7a00;
+ background-color: white;
+ cursor: pointer;
+}
+.dot.active {
+  background-color: #ff7a00;
+}
+.arrows{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.arrow-up, .arrow-down {
+  font-size: 16px;
+color: white;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+
